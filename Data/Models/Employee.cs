@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Data.Models
         // class containing the properties of an employee
         #region Properties
         [Key]
-        public int EmployeeId { get; set; }
+        public int Id { get; set; }
         [Display(Name = "Voornaam")]
         public string FirstName { get; set; }
         [Display(Name = "Achternaam")]

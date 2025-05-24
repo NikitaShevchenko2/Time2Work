@@ -12,7 +12,7 @@ namespace DAL.Interfaces
         // generic, class gets added in implementation
         List<T> GetAll();
         T GetById(int id);
-        void Update(T model);
+        bool Update(T model);
         void Add(T model);
         void Delete(int id);
     }
