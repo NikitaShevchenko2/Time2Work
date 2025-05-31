@@ -17,8 +17,14 @@ namespace Data.Models
         [ForeignKey("Employee")]
         public int EmployeeId { get; set; }
         public Employee Employee { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        // date of availability
+        public DateTime Date {  get; set; }
+        // starting time of availability
+        public TimeSpan? StartTime { get; set; }
+        // end time of availability
+        public TimeSpan? EndTime { get; set; }
+        // availability can be easily changed without deleting 
+        public bool IsAvailable { get; set; }
         #endregion
     }
 }

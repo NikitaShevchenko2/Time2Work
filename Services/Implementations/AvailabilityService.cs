@@ -10,18 +10,18 @@ using System.Threading.Tasks;
 
 namespace Services.Implementations
 {
-    public class EmployeeService : BaseService<Employee>, IGenericService<Employee>
+    public class AvailabilityService : BaseService<Availability>, IGenericService<Availability>
     {
-        // class containing the services for the employee
+        // class containing all services for availability
         #region Constructor
-        public EmployeeService(IGenericRepo<Employee> repo) : base(repo)
+        public AvailabilityService(IGenericRepo<Availability> repo) : base(repo)
         {
             
         }
         #endregion
 
         #region Methods
-        public void Add(Employee model)
+        public void Add(Availability model)
         {
             _repo.Add(model);
         }
@@ -31,25 +31,19 @@ namespace Services.Implementations
             _repo.Delete(id);
         }
 
-        public List<Employee> GetAll()
+        public List<Availability> GetAll()
         {
             return _repo.GetAll();
         }
 
-        public Employee GetById(int id)
+        public Availability GetById(int id)
         {
             return _repo.GetById(id);
         }
 
-        public void Update(Employee model)
+        public void Update(Availability model)
         {
             _repo.Update(model);
-        }
-
-        // list of all availabilities per employee
-        public ICollection<Availability> GetAvailabilitiesPerEmployee(int id)
-        {
-            return _repo.GetById(id).Availabilities.ToList();
         }
         #endregion
     }

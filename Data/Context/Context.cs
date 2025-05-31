@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Data.Context
 {
-    public class Context : IdentityDbContext<IdentityUser>
+    public class Context : IdentityDbContext<Employee>
     {
         // class containing the context for accessing the database
         public Context(DbContextOptions<Context> options) : base(options)
